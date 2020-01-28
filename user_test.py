@@ -50,7 +50,6 @@ class TestUser(unittest.TestCase):
         test_user.save_user()
         self.assertEqual(len(User.user_list),2)
 
-    
 
     def test_delete_user(self):
             '''
@@ -63,7 +62,7 @@ class TestUser(unittest.TestCase):
             self.new_user.delete_user()# Deleting a user object
             self.assertEqual(len(User.user_list),1)
 
-    def test_find_user_by_username(self):
+    def test_find_by_user(self,user_name):
             '''
             test to check if we can find a user  by username and display information
             '''
@@ -72,10 +71,10 @@ class TestUser(unittest.TestCase):
             test_user = User("Zashy" ,"zashy12345") # new user
             test_user.save_user()
 
-            found_user = User.find_by_username ("Zashy")
+            found_user = User.find_by_user ("Zashy")
             self.assertEqual(found_user.user_name,  test_user.user_name)
             
-    def test_username_exists(self):
+    def test_user_exists(self):
         '''
         test to check if we can return a Boolean  if we cannot find the user.
         '''
@@ -84,9 +83,9 @@ class TestUser(unittest.TestCase):
         test_user = User("Zashy", "zashy12345") # new user
         test_user.save_user()
 
-        username_exists = User.user_exist("Zashy")
+        user_exists = User.user_exist("Zashy","zashy12345")
 
-        self.assertTrue(username_exists)
+        self.assertTrue(user_exists)
     def test_display_all_user(self):
         '''
         method that returns a list of all contacts saved
