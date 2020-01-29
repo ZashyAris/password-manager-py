@@ -12,6 +12,32 @@ The password manager app is a terminal run app that allows you to create and sto
 
 python3.6
 
+## Installation
+
+<p>This is how one can install my project:</p>
+<ol>
+<li>Step 1 : Clone this repository using git clone https://github.com/ZashyAris/password-manager-py or downloading a ZIP file of the code.</li>
+<li>Step 2 : The repository, if downloaded as a .zip file will need to be extracted to your preferred location and opened</li>
+<li>Step 3 : Open the terminal, go to the project directory and download the dependencies in the package.json using npm install</li>
+<li>Step 4 : Run working.py in terminal</li>
+</ol>
+
+## Behaviour Driven Development
+ Behaviour | Input | Output |
+| :---------------- | :---------------: | ------------------: |
+| Display short codes for navigating |**Enter:** cre  | Create an account by entering your username and password |
+|Prompts user to login after creating an account|**Enter:** Name and password|Login successful|
+|Displays short codes for navigating credentials|**Enter:** crec| Enter sitename and username |
+|Displays short codes for navigating credentials |**Enter:** disc/fidc/copc/ext|Prompts users to display credentials/find credentials/copies credentials/exits the credentional section|
+
+## Test Driven Development
+ <p>To test the app, run this commands in the terminal;</p>
+
+$ python3.6 user_test.py
+
+$ python3.6 credential_test.py
+
+
 ## License
 The MIT License (MIT) Copyright (c) 2020 Sharon Atieno.
 
