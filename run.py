@@ -120,7 +120,7 @@ def main():
                         create_credential(user_name,sitename,password)
                         save_credential(create_credential(user_name,sitename,password))
                         while True:
-                                print("Choose the password method you would like. Use keys: \n ep - To enter a password \n gp - To generate a password \n ex - exit")
+                                print("Choose the password method you would like. Use keys: \n entp - To enter a password \n genp - To generate a password \n ex - exit")
                                 password_choice = input("Enter an option: ").lower().strip()
                                 if password_choice == "entp":
                                     print('\n')
