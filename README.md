@@ -37,6 +37,10 @@ $ python3.6 user_test.py
 
 $ python3.6 credential_test.py
 
+## Code Beat
+
+[![codebeat badge](https://codebeat.co/badges/14e85749-c0e6-461e-b492-b8d13cbd3910)](https://codebeat.co/projects/github-com-zashyaris-password-manager-py-master)
+
 
 ## License
 The MIT License (MIT) Copyright (c) 2020 Sharon Atieno.
