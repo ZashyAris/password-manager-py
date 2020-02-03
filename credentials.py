@@ -1,5 +1,5 @@
-import random 
 import pyperclip
+import random 
 import string
 class Credential:
   '''
@@ -58,13 +58,7 @@ class Credential:
       for credential in cls.credential_list:
           if credential.sitename == sitename:
               return credential
-  @classmethod
-  def copy_credential(cls, sitename):
-      '''
-      Class method that copies a credentials details after the credentials sitename has been entered
-      '''
-      find_credential = Credential.find_by_sitename(sitename)
-      return pyperclip.copy(find_credential.password)
+  
   @classmethod
   def credential_exist(cls, sitename):
     '''
@@ -77,3 +71,11 @@ class Credential:
       if (credential.sitename == sitename):
         the_credential = sitename
     return the_credential
+
+  @classmethod
+  def copy_credential(cls, sitename):
+      '''
+      Class method that copies a credentials details after the credentials sitename has been entered
+      '''
+      find_credential = Credential.find_by_sitename(sitename)
+      return pyperclip.copy(find_credential.password)
