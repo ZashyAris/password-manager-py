@@ -97,18 +97,12 @@ def main():
             password = input("Type your password:")
             save_user(create_user(user_name,password))
             print(f"Account has been created for {user_name }")
-        elif short_code == "exi":
-                        break    
-            
-        elif short_code == "log":
             print('\n')
             print("Enter your login details")
             user_name = input("Enter your user name:")
             password = input("Type your password:")
-            exist = existing_users(user_name, password)
-            if exist == user_name:
-                print(f"You are succesfully logged in {user_name}")
-                while True:
+            print(f"You are succesfully logged in {user_name}")
+            while True:
                     print("Navigation codes: \n crec - create credential, \n disc - display credential, \n fidc - find credential, \n copc -copy credential \n ext - exit")
                     short_code = input('select a choice: ').lower()
                     if short_code == "ext":
@@ -148,6 +142,8 @@ def main():
                     elif short_code == "copc":
                         the_site = input("Enter the site name for the credential you want to copy: ")
                         copy_credential(the_site)
+        elif short_code == "exi":
+                        break    
                     
 if __name__ == '__main__':
     main()
